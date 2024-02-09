@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkextremum_wiki=self.webpackChunkextremum_wiki||[]).push([[4044],{8216:e=>{e.exports=JSON.parse('{"label":"facebook","permalink":"/extremum-wiki/blog/tags/facebook","allTagsPath":"/extremum-wiki/blog/tags","count":1,"unlisted":false}')}}]);

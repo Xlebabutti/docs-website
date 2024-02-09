@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkextremum_wiki=self.webpackChunkextremum_wiki||[]).push([[1872],{4336:e=>{e.exports=JSON.parse('{"label":"hola","permalink":"/extremum-wiki/blog/tags/hola","allTagsPath":"/extremum-wiki/blog/tags","count":1,"unlisted":false}')}}]);

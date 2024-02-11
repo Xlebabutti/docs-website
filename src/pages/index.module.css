@@ -21,3 +21,11 @@
   align-items: center;
   justify-content: center;
 }
+
+.jump {
+  background-image: url("/static/img/jump.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

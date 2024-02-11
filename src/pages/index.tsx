@@ -2,48 +2,70 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
-import styles from "./index.module.css";
+import classes from "./index.module.css";
 import { ExtremumLogo } from "../components/HomepageLogo";
+import AboutPlatform from "../components/HomepageSections/AboutPlatform";
+import WhoIsRightFor from "../components/HomepageSections/WhoIsRightFor";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <header className={clsx("hero hero--primary", styles.heroBanner)}>
+    <header
+      className={clsx("hero hero--primary", classes.heroBanner, classes.jump)}
+    >
       <div className="container">
         <ExtremumLogo></ExtremumLogo>
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        {/* <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <div className={classes.buttons}>
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
             Docusaurus Tutorial - 5min ⏱️
           </Link>
-        </div> */}
+        </div>
       </div>
     </header>
   );
 }
+
+// import imgBG from "@site/static/img/undraw_docusaurus_react.svg";
+
+// interface imgStyleType {
+//   backgroundImage: string;
+//   backgroundPosition: string;
+//   backgroundSize: string;
+//   backgroundRepeat: string;
+//   width: string;
+//   height: string;
+// }
+
+// const imgStyle: imgStyleType = {
+//   backgroundImage: `url(${imgBG})`,
+//   backgroundPosition: "center",
+//   backgroundSize: "cover",
+//   backgroundRepeat: "no-repeat",
+//   width: "100vw",
+//   height: "100vh",
+// };
 
 export default function Home(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
+      <AboutPlatform />
+      <WhoIsRightFor />
     </Layout>
   );
 }

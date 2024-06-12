@@ -30,19 +30,15 @@ const config: Config = {
     defaultLocale: "ru",
     locales: ["ru"],
   },
-
+ 
   presets: [
     [
-      "@docusaurus/preset-classic",
+        "@docusaurus/preset-classic",
       {
-        docs: {
-          path: "docs",
-          routeBasePath: "help",
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        docs: { 
+            path: "docs",
+            routeBasePath: "/",
+            sidebarPath: './sidebars.ts'
         },
         blog: {
           path: "blog",
@@ -55,54 +51,50 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        
       } satisfies Preset.Options,
     ],
   ],
 
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "studio",
-        path: "studio",
-        routeBasePath: "studio",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "tools",
-        path: "tools",
-        routeBasePath: "tools",
-      },
-    ],
-  ],
+//   plugins: [
+//     [
+//       "@docusaurus/plugin-content-docs",
+//       {
+//         id: "studio",
+//         path: "studio",
+//         routeBasePath: "studio",
+//       },
+//     ],
+//     [
+//       "@docusaurus/plugin-content-docs",
+//       {
+//         id: "tools",
+//         path: "tools",
+//         routeBasePath: "tools",
+//       },
+//     ],
+//   ],
 
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      //   title: "extremum.help",
+        title: "extremum.help",
       logo: {
-        alt: "My Site Logo",
+        alt: "extremum.help",
         src: "img/extremum-logo.svg",
       },
       items: [
-        {
-          to: "/help",
-          label: ".help",
-          position: "left",
-        },
-        {
-          to: "/tools",
-          label: ".tools",
-          position: "left",
-        },
-        {
-          to: "/studio",
-          label: ".studio",
-          position: "left",
-        },
+        // {
+        //   to: "/tools",
+        //   label: ".tools",
+        //   position: "left",
+        // },
+        // {
+        //   to: "/studio",
+        //   label: ".studio",
+        //   position: "left",
+        // },
         // {
         //   type: "docSidebar",
         //   sidebarId: "tutorialSidebar",
@@ -116,6 +108,7 @@ const config: Config = {
         //   position: "right",
         // },
       ],
+
     },
     footer: {
       style: "dark",
